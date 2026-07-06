@@ -1,6 +1,12 @@
-# Handoff Session Skill
+---
+name: handoff-session
+description: >
+  Captures current session state and creates a structured handoff doc for the next agent/session
+  to resume work. Use when the user says "/handoff", "handoff session", "summarize for handoff",
+  "create handoff", or when a session is ending with incomplete work that needs to be resumed later.
+---
 
-**Trigger**: `/handoff`, `handoff session`, `summarize for handoff`, `create handoff`
+# Handoff Session Skill
 
 Captures current session state and creates structured handoff doc for next agent/session to resume work.
 
@@ -34,9 +40,8 @@ Captures current session state and creates structured handoff doc for next agent
 - [blocker or question]
 ```
 
-## Implementation
+## When to use
 
-Call `skill_ide` with name `handoff-session` when:
 - User explicitly requests `handoff` or `summarize for handoff`
 - Session ending and work is incomplete (use before closing)
 - Handing work to another agent or session
